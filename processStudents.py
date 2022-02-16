@@ -51,7 +51,14 @@ for kid in student_csv:
     #check if the GPA is below 3.0. If so, write the record to the outfile
     if float(kid[8]) < 3:
         for element in kid:
-            lineitem = lineitem + element.__str__() + ","
+            if element == kid[1]:
+                pass
+            elif element == kid[4]:
+                pass
+            elif element == kid[5]:
+                pass
+            else:
+                lineitem = lineitem + element.__str__() + ","
             
         
         output.write(lineitem[:-1]+"\n")
